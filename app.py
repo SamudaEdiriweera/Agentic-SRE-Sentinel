@@ -25,7 +25,7 @@ st.sidebar.header("Simulation Controls")
 
 if st.sidebar.button("🟢 Start/Reset Environment"):
     import subprocess
-    subprocess.run(["python", "setup_victim.py"])
+    subprocess.run([sys.executable, "-m", "scripts.setup_victim"])
     st.sidebar.success("Environment Reset!")
 
 if st.sidebar.button("🔴 SABOTAGE: Stop Container"):
